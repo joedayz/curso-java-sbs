@@ -2,4 +2,4 @@
 Proyectos del Curso Java - SBS
 
 
-1. web-book: Proyecto Realizado con Quarkus
+1. rest-book: Proyecto Realizado con Quarkus
