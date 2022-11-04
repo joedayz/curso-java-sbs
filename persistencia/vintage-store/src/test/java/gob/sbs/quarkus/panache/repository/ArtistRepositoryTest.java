@@ -1,39 +1,45 @@
-package gob.sbs.quarkus.panache;
-
+package gob.sbs.quarkus.panache.repository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import gob.sbs.quarkus.jdbc.Artist;
-import gob.sbs.quarkus.panache.repository.ArtistRepository;
 import io.quarkus.test.TestTransaction;
 import io.quarkus.test.junit.QuarkusTest;
 import javax.inject.Inject;
 import org.junit.jupiter.api.Test;
 
 @QuarkusTest
-public class PanacheRepositoryTest {
+public class ArtistRepositoryTest {
 
   @Inject
   ArtistRepository repository;
 
   @Test
   @TestTransaction
-  public void shouldCreateAndFindArtist(){
+  public void shouldCreateAndFindAnArtist() {
+    long count = repository.count();
+    int listAll = repository.listAll().size();
+    assertEquals(count, listAll);
+    assertEquals(repository.listAllArtistsSorted().size(), listAll);
 
-    Artist artist = new Artist("name");
+    // Creates an Artist
+    Artist artist = new Artist();
+    artist.setName("name");
+    artist.setBio("bio");
 
-    assertFalse(repository.isPersistent(artist));
     repository.persist(artist);
-    assertTrue(repository.isPersistent(artist));
     assertNotNull(artist.getId());
 
+    assertEquals(count + 1, repository.count());
+
+
+    // Gets the Artists
     artist = repository.findById(artist.getId());
     assertEquals("name", artist.getName());
 
+    // Deletes the Artist
     repository.deleteById(artist.getId());
-    assertFalse(repository.isPersistent(artist));
+    assertEquals(count, repository.count());
   }
 }
