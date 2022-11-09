@@ -36,7 +36,7 @@ public class ArtistPage {
 
     @GET
     @Path("{id}")
-    public TemplateInstance showArtistById(@PathParam("id") Long id){
+    public TemplateInstance showArtistById(@PathParam("id") Long id) {
         return Templates.artist(repository.findById(id));
     }
 
