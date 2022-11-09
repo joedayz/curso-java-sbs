@@ -9,6 +9,7 @@ import javax.enterprise.context.ApplicationScoped;
 @ApplicationScoped
 public class CustomerRepository implements PanacheRepository<Customer> {
 
+
   public List<Customer> listAllDans(){
     return list("firstName = 'Dan'", Sort.by("lastName"));
   }

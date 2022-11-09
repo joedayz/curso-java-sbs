@@ -20,6 +20,7 @@ import java.util.List;
 @ApplicationScoped
 public class PublisherPage {
 
+
   @CheckedTemplate
   public static class Templates {
     public static native TemplateInstance publisher(Publisher publisher);
@@ -38,7 +39,7 @@ public class PublisherPage {
     return Templates.publishers(Publisher.find(query, Sort.by(sort)).page(pageIndex, pageSize).list())
       .data("query", query)
       .data("sort", sort)
-      .data("page", pageIndex)
-      .data("size", pageSize);
+      .data("pageIndex", pageIndex)
+      .data("pageSize", pageSize);
   }
 }

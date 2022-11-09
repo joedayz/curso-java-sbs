@@ -11,7 +11,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import java.time.Instant;
 
-
 @Entity
 @Table(name = "t_purchase_order_lines")
 public class OrderLine extends PanacheEntity {

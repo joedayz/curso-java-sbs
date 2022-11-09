@@ -25,7 +25,6 @@ public class Publisher extends PanacheEntity {
   public Publisher() {
   }
 
-
   // ======================================
   // =              Methods               =
   // ======================================
