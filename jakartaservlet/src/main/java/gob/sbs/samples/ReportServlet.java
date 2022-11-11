@@ -38,6 +38,7 @@ public class ReportServlet extends HttpServlet {
         }
       }
     });
+    //Puede hacer otra llamada
   }
 
   private String generateReport(String name) {
