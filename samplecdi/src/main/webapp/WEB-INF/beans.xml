@@ -6,5 +6,6 @@
 
   <interceptors>
     <class>pe.joedayz.samples.AuthenticationInterceptor</class>
+    <class>pe.joedayz.samples.AuditoringInterceptor</class>
   </interceptors>
 </beans>
