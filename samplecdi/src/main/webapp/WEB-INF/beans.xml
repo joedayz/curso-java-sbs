@@ -8,4 +8,8 @@
     <class>pe.joedayz.samples.AuthenticationInterceptor</class>
     <class>pe.joedayz.samples.AuditoringInterceptor</class>
   </interceptors>
+
+  <decorators>
+    <class>pe.joedayz.samples.TributeCalculator</class>
+  </decorators>
 </beans>
