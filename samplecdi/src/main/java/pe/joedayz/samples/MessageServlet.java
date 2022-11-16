@@ -13,7 +13,8 @@ import java.util.Objects;
 public class MessageServlet extends HttpServlet {
 
   @Inject
-  @Message
+  //@Message
+  @MessageField
   private MessageWriter messageWriter;
 
   @Override

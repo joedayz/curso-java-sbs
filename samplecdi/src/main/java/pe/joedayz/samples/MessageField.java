@@ -1,6 +1,5 @@
 package pe.joedayz.samples;
 
-
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.METHOD;
 import static java.lang.annotation.ElementType.PARAMETER;
@@ -14,6 +13,6 @@ import java.lang.annotation.Target;
 @Qualifier
 @Retention(RUNTIME)
 @Target({TYPE, METHOD, FIELD, PARAMETER})
-public @interface Message {
+public @interface MessageField {
 
 }
