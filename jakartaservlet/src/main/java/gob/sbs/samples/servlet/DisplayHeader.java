@@ -1,4 +1,4 @@
-package gob.sbs.samples;
+package gob.sbs.samples.servlet;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
