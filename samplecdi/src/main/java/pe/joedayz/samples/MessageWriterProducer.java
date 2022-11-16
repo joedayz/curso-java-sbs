@@ -1,6 +1,7 @@
 package pe.joedayz.samples;
 
 
+import jakarta.enterprise.inject.Disposes;
 import jakarta.enterprise.inject.Produces;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
@@ -20,4 +21,10 @@ public class MessageWriterProducer {
 
     return new MessageWriter(HOME_PATH + fileName);
   }
+
+  public void clean(@Disposes @Message MessageWriter messageWriter){
+    LOGGER.info("Removing file message");
+    messageWriter.clean();
+  }
+
 }
