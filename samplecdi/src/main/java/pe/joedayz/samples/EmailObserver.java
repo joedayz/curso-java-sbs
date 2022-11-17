@@ -17,8 +17,8 @@ public class EmailObserver {
   }
 
   private void sendEmail(Email email) {
-    LOGGER.info("Email "+ email.getSubject().orElse("")
-    + "sent from" + email.getFrom()
-    + "to"+ email.getTo());
+    LOGGER.info("Email: "+ email.getSubject().orElse("")
+    + " sent from: " + email.getFrom()
+    + " to: "+ email.getTo());
   }
 }
