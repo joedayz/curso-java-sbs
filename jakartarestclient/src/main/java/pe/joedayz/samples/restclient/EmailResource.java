@@ -37,10 +37,16 @@ public class EmailResource {
       @DefaultValue("Hello! Welcome!") @FormParam("message") String message){
 
       UserDto user = UserDto.of(name, email);
-      if(userService.save(user)){
-        emailService.send("system@test.test", user.getEmail(), subject, message);
-        return Response.ok().build();
-      }
-      return Response.serverError().build();
+
+      userService.saveAsync(user, subject, message);
+
+      // Call sync
+//      if(userService.save(user)){
+//        emailService.send("system@test.test", user.getEmail(), subject, message);
+//        return Response.ok().build();
+//      }
+      //return Response.serverError().build();
+
+      return Response.ok().build();
   }
 }
