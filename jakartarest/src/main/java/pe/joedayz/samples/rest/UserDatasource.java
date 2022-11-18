@@ -19,7 +19,7 @@ public class UserDatasource {
     users = new HashMap<>();
   }
 
-  public Optional<User> findById(Long id){
+  public Optional<User> findById(String id){
     return Optional.ofNullable(users.get(id));
   }
 

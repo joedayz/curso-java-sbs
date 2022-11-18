@@ -45,7 +45,7 @@ public class UserResource {
   @Path("/{id}")   //http://localhost:8080/jakartarest/api/users/1
   @Produces(APPLICATION_JSON)
   public Response findById(@PathParam("id") String id){
-      Optional<User> user = userDatasource.findById(Long.valueOf(id));
+      Optional<User> user = userDatasource.findById(id);
       if(!user.isPresent()){
         return Response.status(Status.NOT_FOUND).build();
       }
