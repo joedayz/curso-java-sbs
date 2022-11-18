@@ -8,11 +8,14 @@ import jakarta.ws.rs.FormParam;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import jakarta.ws.rs.core.Response.Status;
 import java.net.URI;
 import java.util.Collections;
+import java.util.Optional;
 
 @Path("/users")
 public class UserResource {
@@ -36,5 +39,16 @@ public class UserResource {
   public Response save(@FormParam("name") String name, @FormParam("email")String email){
     User user = userDatasource.persist(User.of(name, email));
     return Response.created(URI.create(String.format("/users/%s", user.getId()))).build();
+  }
+
+  @GET
+  @Path("/{id}")   //http://localhost:8080/jakartarest/api/users/1
+  @Produces(APPLICATION_JSON)
+  public Response findById(@PathParam("id") String id){
+      Optional<User> user = userDatasource.findById(Long.valueOf(id));
+      if(!user.isPresent()){
+        return Response.status(Status.NOT_FOUND).build();
+      }
+      return Response.ok(user.get()).build();
   }
 }
