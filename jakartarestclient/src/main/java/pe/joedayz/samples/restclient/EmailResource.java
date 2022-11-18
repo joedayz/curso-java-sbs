@@ -30,4 +30,17 @@ public class EmailResource {
     emailService.send("system@test.test", user.getEmail(), subject, message);
     return Response.ok().build();
   }
+
+  @POST
+  public Response sendAndSaveUser(@FormParam("name") String name, @FormParam("email") String email,
+      @DefaultValue("Hello") @FormParam("subject") String subject,
+      @DefaultValue("Hello! Welcome!") @FormParam("message") String message){
+
+      UserDto user = UserDto.of(name, email);
+      if(userService.save(user)){
+        emailService.send("system@test.test", user.getEmail(), subject, message);
+        return Response.ok().build();
+      }
+      return Response.serverError().build();
+  }
 }

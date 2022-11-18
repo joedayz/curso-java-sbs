@@ -6,6 +6,13 @@ public class UserDto {
   private String name;
   private String email;
 
+  public static UserDto of(String name, String email) {
+    UserDto userDto = new UserDto();
+    userDto.setName(name);
+    userDto.setEmail(email);
+    return userDto;
+  }
+
   public String getId() {
     return id;
   }
