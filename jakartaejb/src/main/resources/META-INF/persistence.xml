@@ -1,0 +1,6 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence">
+  <persistence-unit name="jakartaee-unit">
+    <jta-data-source></jta-data-source>
+    <properties></properties>
+  </persistence-unit>
+</persistence>
