@@ -1,25 +1,21 @@
 package pe.joedayz.samples.jakartaejb.entity;
 
-
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import java.math.BigDecimal;
+import jakarta.persistence.ManyToMany;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
-public class Product {
+public class Purchase {
 
   @Id
   @GeneratedValue
   private Long id;
 
-  @Column
-  private String name;
-
-  @Column(scale = 2)
-  private BigDecimal price;
+  @ManyToMany
+  public List<Product> products;
 
   public Long getId() {
     return id;
@@ -29,20 +25,20 @@ public class Product {
     this.id = id;
   }
 
-  public String getName() {
-    return name;
+  public List<Product> getProducts() {
+    return products;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setProducts(List<Product> products) {
+    this.products = products;
   }
 
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
-    Product product = (Product) o;
-    return Objects.equals(id, product.id);
+    Purchase purchase = (Purchase) o;
+    return Objects.equals(id, purchase.id);
   }
 
   @Override
@@ -50,20 +46,11 @@ public class Product {
     return Objects.hash(id);
   }
 
-  public BigDecimal getPrice() {
-    return price;
-  }
-
-  public void setPrice(BigDecimal price) {
-    this.price = price;
-  }
-
   @Override
   public String toString() {
-    return "Product{" +
+    return "Purchase{" +
         "id=" + id +
-        ", name='" + name + '\'' +
-        ", price=" + price +
+        ", products=" + products +
         '}';
   }
 }
