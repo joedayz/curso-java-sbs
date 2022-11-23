@@ -1,6 +1,10 @@
 package pe.joedayz.samples.jakartaejb.stateless;
 
 import jakarta.ejb.Stateless;
+import jakarta.ejb.TransactionAttribute;
+import jakarta.ejb.TransactionAttributeType;
+import jakarta.ejb.TransactionManagement;
+import jakarta.ejb.TransactionManagementType;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import java.io.Serializable;
@@ -9,6 +13,7 @@ import java.util.Optional;
 import pe.joedayz.samples.jakartaejb.entity.Purchase;
 
 @Stateless
+@TransactionManagement(value = TransactionManagementType.CONTAINER)
 public class PurchaseBusiness implements Serializable {
 
   @PersistenceContext
@@ -21,6 +26,7 @@ public class PurchaseBusiness implements Serializable {
   }
 
 
+  @TransactionAttribute(TransactionAttributeType.REQUIRED)
   public void save(Purchase purchase){
     entityManager.persist(purchase);
   }

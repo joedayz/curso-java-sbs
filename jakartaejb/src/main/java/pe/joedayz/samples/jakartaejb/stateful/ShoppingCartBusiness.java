@@ -20,7 +20,7 @@ public class ShoppingCartBusiness implements Serializable {
 
   @PostConstruct
   public void initialize(){
-    products =  new ArrayList<>();
+    this.products =  new ArrayList<>();
   }
 
 
