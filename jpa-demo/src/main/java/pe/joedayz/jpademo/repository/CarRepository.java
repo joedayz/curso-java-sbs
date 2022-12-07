@@ -12,9 +12,9 @@ import org.springframework.data.repository.CrudRepository;
 @RepositoryRestResource
 public interface CarRepository extends CrudRepository<Car, Long> {
 
-//  List<Car> findByBrand(@Param("brand") String brand);
-//
-//  List<Car> findByColor(@Param("color") String color);
+  List<Car> findByBrand(@Param("brand") String brand);
+
+  List<Car> findByColor(@Param("color") String color);
 //
 //  List<Car> findByBrandOrderByYearAsc(String brand);
 //
