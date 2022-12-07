@@ -13,7 +13,6 @@ import java.util.Optional;
 import pe.joedayz.samples.jakartaejb.entity.Purchase;
 
 @Stateless
-@TransactionManagement(value = TransactionManagementType.CONTAINER)
 public class PurchaseBusiness implements Serializable {
 
   @PersistenceContext
@@ -25,8 +24,6 @@ public class PurchaseBusiness implements Serializable {
         .getResultList();
   }
 
-
-  @TransactionAttribute(TransactionAttributeType.REQUIRED)
   public void save(Purchase purchase){
     entityManager.persist(purchase);
   }

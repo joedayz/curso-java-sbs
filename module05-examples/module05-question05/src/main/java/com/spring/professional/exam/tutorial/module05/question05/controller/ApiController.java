@@ -42,7 +42,7 @@ public class ApiController {
 
     }
 
-    // curl -X POST localhost:8080/api/articles/search -H 'Content-Type: application/json' -d '{"bodyLike": "%some%"}' |jq
+        // curl -X POST localhost:8080/api/articles/search -H 'Content-Type: application/json' -d '{"bodyLike": "%some%"}' |jq
     @PostMapping(value = "search", consumes = APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Article>> searchByCriteria(@RequestBody ArticleCriteria articleCriteria) {
         return ResponseEntity.ok()

@@ -10,7 +10,7 @@ import jakarta.inject.Singleton;
 
 @Singleton
 @ConcurrencyManagement(ConcurrencyManagementType.CONTAINER)
-//@Startup
+@Startup
 public class AccessSingleton {
 
   private Integer count;

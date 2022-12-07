@@ -7,4 +7,7 @@ import java.util.List;
 
 public interface ArticlesDao extends CrudRepository<Article, Integer> {
     List<Article> findByBodyLikeIgnoreCase(String content);
+
+
+
 }
