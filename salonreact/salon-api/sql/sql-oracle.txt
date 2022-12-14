@@ -1,0 +1,40 @@
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ( 'Anti-aging Treatments from AR Salon', 'Anti-aging Treatments', 148, 70);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ( 'Body Massages from AR Salon', 'Body Massages', 107, 110);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ( 'Body Treatments from AR Salon', 'Body Treatments', 129, 90);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ('Facial Massages from AR Salon', 'Facial Massages', 122, 70);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ('Feet Treatments from AR Salon', 'Feet Treatments', 176, 60);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ('LED Light Treatments from AR Salon', 'LED Light Treatments', 14, 30);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ('Acupressure Massage from AR Salon', 'Acupressure Massage', 125, 60);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ( 'Reflexology from AR Salon', 'Reflexology', 183, 40);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ( 'Pore Cleansing Treatments from AR Salon', 'Pore Cleansing Treatments', 127, 120);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ( 'Wrinkle Treatments from AR Salon', 'Wrinkle Treatments', 196, 110);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ( 'Back Treatments from AR Salon', 'Back Treatments', 11, 50);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ( 'Body Scrubs from AR Salon', 'Body Scrubs', 109, 60);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ( 'Body Wraps from AR Salon', 'Body Wraps', 116, 110);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ( 'Facial Treatments from AR Salon', 'Facial Treatments', 34, 70);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ( 'Hand Treatments from AR Salon', 'Hand Treatments', 149, 40);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ( 'Mask Treatments from AR Salon', 'Mask Treatments', 44, 60);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ( 'Deep Tissue Massage from AR Salon', 'Deep Tissue Massage', 20, 80);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ( 'Swedish Massage from AR Salon', 'Swedish Massage', 45, 30);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ( 'Brightening Treatments from AR Salon', 'Brightening Treatments', 87, 60);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ( 'Couples Massage from AR Salon', 'Couples Massage', 54, 90);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ( 'Hot Stone Massage from AR Salon', 'Hot Stone Massage', 29, 60);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ( 'Eyebrow Services from AR Salon', 'Eyebrow Services', 200, 110);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ( 'Eye Treatments from AR Salon', 'Eye Treatments', 187, 90);
+INSERT INTO hr.salon_service_detail ( description, name, price, time_in_minutes) VALUES ( 'Skin Extractions from AR Salon', 'Skin Extractions', 48, 70);
+
+INSERT INTO hr.slot ( confirmed_at, locked_at, slot_for, status, stylist_name, selected_service_id) VALUES ( NULL, NULL, NULL, 0, 'George Wagner', NULL);
+INSERT INTO hr.slot ( confirmed_at, locked_at, slot_for, status, stylist_name, selected_service_id) VALUES ( NULL, NULL, NULL, 0, 'George Wagner', NULL);
+INSERT INTO hr.slot ( confirmed_at, locked_at, slot_for, status, stylist_name, selected_service_id) VALUES ( NULL, NULL, NULL, 0, 'Clint Meyer', NULL);
+INSERT INTO hr.slot ( confirmed_at, locked_at, slot_for, status, stylist_name, selected_service_id) VALUES ( NULL, NULL, NULL, 0, 'Clint Meyer', NULL);
+
+
+
+INSERT INTO hr.slot_available_services (slot_id, available_services_id) VALUES (4, 16);
+INSERT INTO hr.slot_available_services (slot_id, available_services_id) VALUES (4, 23);
+INSERT INTO hr.slot_available_services (slot_id, available_services_id) VALUES (5, 16);
+INSERT INTO hr.slot_available_services (slot_id, available_services_id) VALUES (5, 23);
+INSERT INTO hr.slot_available_services (slot_id, available_services_id) VALUES (6, 16);
+INSERT INTO hr.slot_available_services (slot_id, available_services_id) VALUES (6, 23);
+INSERT INTO hr.slot_available_services (slot_id, available_services_id) VALUES (7, 16);
+INSERT INTO hr.slot_available_services (slot_id, available_services_id) VALUES (7, 23);
