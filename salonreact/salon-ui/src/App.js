@@ -11,7 +11,7 @@ import ChooseSlot from './components/ChooseSlot';
 import PaymentContainer from './components/PaymentContainer';
 import VerifyUser from './components/VerifyUser';
 
-const stripePromise = loadStripe("<STRIPE_PUBLIC_KEY>");
+const stripePromise = loadStripe("pk_test_51HLfNtEkqT5l0tTrwUsRgXukP5J5ZEYppcJpYbrTUaIH157wfIF0Dk8KO8oe49WCwY73RG9MfcZKobAmJWCxY5xN00MZY4RfxG");
 
 class App extends React.Component {
   render() {
