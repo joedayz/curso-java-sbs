@@ -28,6 +28,7 @@ public class Payment {
     private PaymentStatus status;
     private String clientSecret;
     private String intentId;
+
     @CreatedDate
     private LocalDateTime created;
     @LastModifiedDate
