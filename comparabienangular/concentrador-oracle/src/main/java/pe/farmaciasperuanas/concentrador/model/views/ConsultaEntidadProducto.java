@@ -2,6 +2,7 @@ package pe.farmaciasperuanas.concentrador.model.views;
 
 import java.io.Serializable;
 
+import java.math.BigDecimal;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -42,16 +43,16 @@ public class ConsultaEntidadProducto implements Serializable{
 	private Double porcentajeTea;
 	
 	@Column(name="MONTOMINIMODEPOSITO")
-	private Double montoMinimoDeposito;
+	private Integer montoMinimoDeposito;
 
 	@Column(name="MONTOMAXIMODEPOSITO")
-	private Double montoMaximoDeposito;
+	private Integer montoMaximoDeposito;
 	 
 	@Column(name="MONTOMINIMOPRESTAMO")
-	private Double montoMinimoPrestamo;
+	private Integer montoMinimoPrestamo;
 	
 	@Column(name="MONTOMAXIMOPRESTAMO")
-	private Double montoMaximoPrestamo;
+	private Integer montoMaximoPrestamo;
 	
 	@Column(name="INGRESOPERMITIDO")
 	private Integer ingresoPermitido;
@@ -88,6 +89,15 @@ public class ConsultaEntidadProducto implements Serializable{
 	
 	@Column(name="OBSERVACION")
 	private String observacion;
+
+
+	public Long getIdConsultaEntidadProducto() {
+		return idConsultaEntidadProducto;
+	}
+
+	public void setIdConsultaEntidadProducto(Long idConsultaEntidadProducto) {
+		this.idConsultaEntidadProducto = idConsultaEntidadProducto;
+	}
 
 	public Long getIdProductoFinanciero() {
 		return idProductoFinanciero;
@@ -153,35 +163,35 @@ public class ConsultaEntidadProducto implements Serializable{
 		this.porcentajeTea = porcentajeTea;
 	}
 
-	public Double getMontoMinimoDeposito() {
+	public Integer getMontoMinimoDeposito() {
 		return montoMinimoDeposito;
 	}
 
-	public void setMontoMinimoDeposito(Double montoMinimoDeposito) {
+	public void setMontoMinimoDeposito(Integer montoMinimoDeposito) {
 		this.montoMinimoDeposito = montoMinimoDeposito;
 	}
 
-	public Double getMontoMaximoDeposito() {
+	public Integer getMontoMaximoDeposito() {
 		return montoMaximoDeposito;
 	}
 
-	public void setMontoMaximoDeposito(Double montoMaximoDeposito) {
+	public void setMontoMaximoDeposito(Integer montoMaximoDeposito) {
 		this.montoMaximoDeposito = montoMaximoDeposito;
 	}
 
-	public Double getMontoMinimoPrestamo() {
+	public Integer getMontoMinimoPrestamo() {
 		return montoMinimoPrestamo;
 	}
 
-	public void setMontoMinimoPrestamo(Double montoMinimoPrestamo) {
+	public void setMontoMinimoPrestamo(Integer montoMinimoPrestamo) {
 		this.montoMinimoPrestamo = montoMinimoPrestamo;
 	}
 
-	public Double getMontoMaximoPrestamo() {
+	public Integer getMontoMaximoPrestamo() {
 		return montoMaximoPrestamo;
 	}
 
-	public void setMontoMaximoPrestamo(Double montoMaximoPrestamo) {
+	public void setMontoMaximoPrestamo(Integer montoMaximoPrestamo) {
 		this.montoMaximoPrestamo = montoMaximoPrestamo;
 	}
 
@@ -280,13 +290,4 @@ public class ConsultaEntidadProducto implements Serializable{
 	public void setObservacion(String observacion) {
 		this.observacion = observacion;
 	}
-
-	public Long getIdConsultaEntidadProducto() {
-		return idConsultaEntidadProducto;
-	}
-
-	public void setIdConsultaEntidadProducto(Long idConsultaEntidadProducto) {
-		this.idConsultaEntidadProducto = idConsultaEntidadProducto;
-	}
-
 }

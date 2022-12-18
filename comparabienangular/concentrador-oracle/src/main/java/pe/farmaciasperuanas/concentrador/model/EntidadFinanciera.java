@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
@@ -68,7 +69,7 @@ public class EntidadFinanciera implements Serializable{
 	private Boolean activo;
 	
 	@ManyToOne
-	@JoinColumn(name = "DEPARTAMENTOID")
+	@PrimaryKeyJoinColumn(name = "DEPARTAMENTOID")
 	private Departamento departamento;
 
 	public Long getIdEntidadFinanciera() {

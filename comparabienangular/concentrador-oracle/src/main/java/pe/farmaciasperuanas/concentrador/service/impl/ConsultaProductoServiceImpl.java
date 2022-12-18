@@ -1,5 +1,7 @@
 package pe.farmaciasperuanas.concentrador.service.impl;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +39,10 @@ public class ConsultaProductoServiceImpl implements ConsultaProductoService {
 		logger.info("init consulta ..");
 		
 		Pageable pageable = new PageRequest(pagina, Constantes.PAGINATION_SIZE, Sort.Direction.ASC,"idConsultaEntidadProducto");
-		 Page<ConsultaEntidadProducto> page = consultaProductoRepository.findAll(new Specification<ConsultaEntidadProducto>() {
+
+		//List<ConsultaEntidadProducto> all = consultaProductoRepository.findAll();
+
+		Page<ConsultaEntidadProducto> page = consultaProductoRepository.findAll(new Specification<ConsultaEntidadProducto>() {
 
 			@Override
 			public Predicate toPredicate(Root<ConsultaEntidadProducto> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
@@ -73,6 +78,8 @@ public class ConsultaProductoServiceImpl implements ConsultaProductoService {
 			}
 		 }, pageable);
 		 return page.getContent();
+
+		//return all;
 	}
 
 	@Override

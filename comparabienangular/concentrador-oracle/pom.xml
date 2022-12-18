@@ -16,9 +16,9 @@
 		<payaraVersion>5.2020.2</payaraVersion>
 		<final.name>concentrador-ee</final.name>
 		<slf4j.version>1.7.30</slf4j.version>
-		<deltaspike.version>1.9.4</deltaspike.version>
+		<deltaspike.version>1.9.6</deltaspike.version>
 		<jboss.arquillian.version>1.6.0.Final</jboss.arquillian.version>
-		<blaze-persistence.version>1.5.0-Alpha5</blaze-persistence.version>
+		<blaze-persistence.version>1.6.8</blaze-persistence.version>
 	</properties>
 	<dependencies>
 		<dependency>

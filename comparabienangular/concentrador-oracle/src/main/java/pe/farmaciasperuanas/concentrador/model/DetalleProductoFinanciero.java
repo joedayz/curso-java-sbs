@@ -30,16 +30,16 @@ public class DetalleProductoFinanciero implements Serializable{
 	private Integer ingresoPermitido;
 	
 	@Column(name="MONTOMINIMOPRESTAMO")
-	private Double montoMinimoPrestamo;
+	private Integer montoMinimoPrestamo;
 	
 	@Column(name="MONTOMAXIMOPRESTAMO")
-	private Double montoMaximoPrestamo;
+	private Integer montoMaximoPrestamo;
 	
 	@Column(name="MONTOMINIMODEPOSITO")
-	private Double montoMinimoDeposito;
+	private Integer montoMinimoDeposito;
 	
 	@Column(name="MONTOMAXIMODEPOSITO")
-	private Double montoMaximoDeposito;
+	private Integer montoMaximoDeposito;
 	
 	// Equivalente a @JsonIgnore (Spring Boot)
 	@JsonbTransient
@@ -71,35 +71,35 @@ public class DetalleProductoFinanciero implements Serializable{
 		this.ingresoPermitido = ingresoPermitido;
 	}
 
-	public Double getMontoMinimoPrestamo() {
+	public Integer getMontoMinimoPrestamo() {
 		return montoMinimoPrestamo;
 	}
 
-	public void setMontoMinimoPrestamo(Double montoMinimoPrestamo) {
+	public void setMontoMinimoPrestamo(Integer montoMinimoPrestamo) {
 		this.montoMinimoPrestamo = montoMinimoPrestamo;
 	}
 
-	public Double getMontoMaximoPrestamo() {
+	public Integer getMontoMaximoPrestamo() {
 		return montoMaximoPrestamo;
 	}
 
-	public void setMontoMaximoPrestamo(Double montoMaximoPrestamo) {
+	public void setMontoMaximoPrestamo(Integer montoMaximoPrestamo) {
 		this.montoMaximoPrestamo = montoMaximoPrestamo;
 	}
 
-	public Double getMontoMinimoDeposito() {
+	public Integer getMontoMinimoDeposito() {
 		return montoMinimoDeposito;
 	}
 
-	public void setMontoMinimoDeposito(Double montoMinimoDeposito) {
+	public void setMontoMinimoDeposito(Integer montoMinimoDeposito) {
 		this.montoMinimoDeposito = montoMinimoDeposito;
 	}
 
-	public Double getMontoMaximoDeposito() {
+	public Integer getMontoMaximoDeposito() {
 		return montoMaximoDeposito;
 	}
 
-	public void setMontoMaximoDeposito(Double montoMaximoDeposito) {
+	public void setMontoMaximoDeposito(Integer montoMaximoDeposito) {
 		this.montoMaximoDeposito = montoMaximoDeposito;
 	}
 

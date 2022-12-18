@@ -9,8 +9,8 @@ public class ConsultaProductoFinancieroRequest implements Serializable{
 	// Prestamo
 	private Integer codigoProductoFinanciero;
 	private Integer idTipoMoneda;
-	private Double montoMinimoAceptable;
-	private Double montoMaximoAceptable;
+	private Integer montoMinimoAceptable;
+	private Integer montoMaximoAceptable;
 	private Integer plazoMinimoMes;
 	private Integer plazoMaximoMes;
 	private Integer ingresoPermitido;
@@ -30,18 +30,23 @@ public class ConsultaProductoFinancieroRequest implements Serializable{
 	public void setIdTipoMoneda(Integer idTipoMoneda) {
 		this.idTipoMoneda = idTipoMoneda;
 	}
-	public Double getMontoMinimoAceptable() {
+
+	public Integer getMontoMinimoAceptable() {
 		return montoMinimoAceptable;
 	}
-	public void setMontoMinimoAceptable(Double montoMinimoAceptable) {
+
+	public void setMontoMinimoAceptable(Integer montoMinimoAceptable) {
 		this.montoMinimoAceptable = montoMinimoAceptable;
 	}
-	public Double getMontoMaximoAceptable() {
+
+	public Integer getMontoMaximoAceptable() {
 		return montoMaximoAceptable;
 	}
-	public void setMontoMaximoAceptable(Double montoMaximoAceptable) {
+
+	public void setMontoMaximoAceptable(Integer montoMaximoAceptable) {
 		this.montoMaximoAceptable = montoMaximoAceptable;
 	}
+
 	public Integer getPlazoMinimoMes() {
 		return plazoMinimoMes;
 	}
