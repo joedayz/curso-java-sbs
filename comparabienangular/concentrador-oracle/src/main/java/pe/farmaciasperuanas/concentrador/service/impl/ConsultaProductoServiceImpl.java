@@ -40,46 +40,46 @@ public class ConsultaProductoServiceImpl implements ConsultaProductoService {
 		
 		Pageable pageable = new PageRequest(pagina, Constantes.PAGINATION_SIZE, Sort.Direction.ASC,"idConsultaEntidadProducto");
 
-		//List<ConsultaEntidadProducto> all = consultaProductoRepository.findAll();
+		List<ConsultaEntidadProducto> all = consultaProductoRepository.findAll();
 
-		Page<ConsultaEntidadProducto> page = consultaProductoRepository.findAll(new Specification<ConsultaEntidadProducto>() {
+//		Page<ConsultaEntidadProducto> page = consultaProductoRepository.findAll(new Specification<ConsultaEntidadProducto>() {
+//
+//			@Override
+//			public Predicate toPredicate(Root<ConsultaEntidadProducto> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
+//				List<Predicate> predicates = new ArrayList<>();
+//				if(Util.isNotNull(t.getCodigoProductoFinanciero())) {
+//					predicates.add(cb.and(cb.equal(root.get("idTipoProducto"),t.getCodigoProductoFinanciero())));
+//				}
+//				if(Util.isNotNull(t.getIdTipoMoneda())) {
+//					predicates.add(cb.and(cb.equal(root.get("idMoneda"),t.getIdTipoMoneda())));
+//				}
+//				if(Util.isNotNull(t.getMontoMaximoAceptable())) {
+//					predicates.add(cb.and(cb.greaterThanOrEqualTo(root.get("montoMaximoPrestamo"),t.getMontoMaximoAceptable())));
+//				}
+//				if(Util.isNotNull(t.getPlazoMaximoMes())) {
+//					predicates.add(cb.and(cb.greaterThanOrEqualTo(root.get("plazoMaximoMes"),t.getPlazoMaximoMes())));
+//				}
+//				if(Util.isNotNull(t.getIngresoPermitido())) {
+//					predicates.add(cb.and(cb.greaterThanOrEqualTo(root.get("ingresoPermitido"),t.getIngresoPermitido())));
+//				}
+//				if(Util.isNotNull(t.getIdDepartamento())) {
+//					predicates.add(cb.and(cb.equal(root.get("idDepartamento"),t.getIdDepartamento())));
+//				}
+//				if(Util.isNotNull(t.getIdTipoInstitucion())) {
+//					predicates.add(cb.and(cb.equal(root.get("idTipoInstitucion"),t.getIdTipoInstitucion())));
+//				}
+//				if(Util.isNotNull(t.getMontoMaximoDeposito())) {
+//					predicates.add(cb.and(cb.greaterThanOrEqualTo(root.get("montoMaximoDeposito"),t.getMontoMaximoDeposito())));
+//				}
+//				if(Util.isNotNull(t.getPlazoMaximoDia())) {
+//					predicates.add(cb.and(cb.greaterThanOrEqualTo(root.get("plazoMaximoDia"),t.getPlazoMaximoDia())));
+//				}
+//				return cb.and(predicates.toArray(new Predicate[predicates.size()]));
+//			}
+//		 }, pageable);
+//		 return page.getContent();
 
-			@Override
-			public Predicate toPredicate(Root<ConsultaEntidadProducto> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
-				List<Predicate> predicates = new ArrayList<>();
-				if(Util.isNotNull(t.getCodigoProductoFinanciero())) {
-					predicates.add(cb.and(cb.equal(root.get("idTipoProducto"),t.getCodigoProductoFinanciero())));
-				}
-				if(Util.isNotNull(t.getIdTipoMoneda())) {
-					predicates.add(cb.and(cb.equal(root.get("idMoneda"),t.getIdTipoMoneda())));
-				}
-				if(Util.isNotNull(t.getMontoMaximoAceptable())) {
-					predicates.add(cb.and(cb.greaterThanOrEqualTo(root.get("montoMaximoPrestamo"),t.getMontoMaximoAceptable())));
-				}
-				if(Util.isNotNull(t.getPlazoMaximoMes())) {
-					predicates.add(cb.and(cb.greaterThanOrEqualTo(root.get("plazoMaximoMes"),t.getPlazoMaximoMes())));
-				}
-				if(Util.isNotNull(t.getIngresoPermitido())) {
-					predicates.add(cb.and(cb.greaterThanOrEqualTo(root.get("ingresoPermitido"),t.getIngresoPermitido())));
-				}
-				if(Util.isNotNull(t.getIdDepartamento())) {
-					predicates.add(cb.and(cb.equal(root.get("idDepartamento"),t.getIdDepartamento())));
-				}
-				if(Util.isNotNull(t.getIdTipoInstitucion())) {
-					predicates.add(cb.and(cb.equal(root.get("idTipoInstitucion"),t.getIdTipoInstitucion())));
-				}
-				if(Util.isNotNull(t.getMontoMaximoDeposito())) {
-					predicates.add(cb.and(cb.greaterThanOrEqualTo(root.get("montoMaximoDeposito"),t.getMontoMaximoDeposito())));
-				}
-				if(Util.isNotNull(t.getPlazoMaximoDia())) {
-					predicates.add(cb.and(cb.greaterThanOrEqualTo(root.get("plazoMaximoDia"),t.getPlazoMaximoDia())));
-				}
-				return cb.and(predicates.toArray(new Predicate[predicates.size()]));
-			}
-		 }, pageable);
-		 return page.getContent();
-
-		//return all;
+		return all;
 	}
 
 	@Override
